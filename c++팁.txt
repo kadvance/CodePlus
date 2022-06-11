@@ -1,0 +1,23 @@
+1. using namespace AAA;
+   라고 쓰면 AAA::function 을 사용할때 단순히 function 이라고 써도 된다라는 뜻
+2. 만약 using 이라는 표현을 사용하지 않는다면
+   namespace AAA
+   {
+        void function(void);
+   }
+   AAA::function; 과 같이 사용한다
+
+3. C++ 로 코딩할때는 파이썬과는 다르게 외부에 int a[10][20]; 같은 형식으로 미리 배열을 잡아둔다
+4. 주로 배열을 사용한다 string 과 int 를 사용;
+5. string.size() 를 사용해서 스트링의 길이를 구한다
+6. char 타입의 경우 strlen(msg) 를 이용해서 길이를 구한다
+7. for(int num : num_array) cout<< num <<endl; 를 사용하면 배열값이 출력되나
+   이때는 num 에 값이 따로 따로 복사(대입)되는 문제점이 있다
+   따라서 for(auto &num : num_array) cout<< num <<endl; 과 같이 사용한다   
+   또는 const 를 앞에 붙여 for(const auto &num : num_array) 와같이 사용하기도 한다
+
+8. C#에서 foreach(var item in aaa) 를 쓸때 index 까지 고려할려면
+   foreach(var item in aaa.Select((val,idx) => (val,idx)))
+       var val = item.val;
+       var idx = item.idx;
+   
